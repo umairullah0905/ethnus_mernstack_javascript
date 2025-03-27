@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Alphabetizer</title>
+    <script>
+        function alphabetizeString(str) {
+            return str.split('').sort().join('');
+        }
+        
+        function displayAlphabetizedString() {
+            let inputStr = document.getElementById("stringInput").value;
+            let sortedStr = alphabetizeString(inputStr);
+            document.getElementById("result").innerText = "Alphabetized String: " + sortedStr;
+        }
+    </script>
+</head>
+<body>
+    <h1>Alphabetize a String</h1>
+    <label for="stringInput">Enter a string:</label>
+    <input type="text" id="stringInput" />
+    <button onclick="displayAlphabetizedString()">Alphabetize</button>
+    <p id="result"></p>
+</body>
+</html>

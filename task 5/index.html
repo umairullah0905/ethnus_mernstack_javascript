@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+        .error-border {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body onload="initializeErrors()">
+
+    <h2>Form Validation</h2>
+
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" oninput="validateName()">
+        <span class="error" id="nameError">This field is required</span>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" oninput="validateEmail()">
+        <span class="error" id="emailError">A valid email is required</span>
+        <br><br>
+
+        <label for="website">Website:</label>
+        <input type="text" id="website" oninput="validateWebsite()">
+        <span class="error" id="websiteError">A valid URL is required</span>
+        <br><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" oninput="validateMessage()"></textarea>
+        <span class="error" id="messageError">This field is required</span>
+        <br><br>
+
+        <button type="submit" onclick="return validateForm()">Submit</button>
+    </form>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
